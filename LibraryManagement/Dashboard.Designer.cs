@@ -53,95 +53,99 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { booksToolStripMenuItem, studentToolStripMenuItem, issueBooksToolStripMenuItem, returnBooksToolStripMenuItem, completeBookDetailsToolStripMenuItem, exitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 37);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(700, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // booksToolStripMenuItem
             // 
             booksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addNewBookToolStripMenuItem, viewBooksToolStripMenuItem });
-            booksToolStripMenuItem.Font = new Font("K2D", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            booksToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             booksToolStripMenuItem.Image = (Image)resources.GetObject("booksToolStripMenuItem.Image");
             booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            booksToolStripMenuItem.Size = new Size(88, 33);
+            booksToolStripMenuItem.Size = new Size(78, 24);
             booksToolStripMenuItem.Text = "Books";
             // 
             // addNewBookToolStripMenuItem
             // 
             addNewBookToolStripMenuItem.Name = "addNewBookToolStripMenuItem";
-            addNewBookToolStripMenuItem.Size = new Size(196, 34);
+            addNewBookToolStripMenuItem.Size = new Size(180, 22);
             addNewBookToolStripMenuItem.Text = "Add New Book";
+            addNewBookToolStripMenuItem.Click += addNewBookToolStripMenuItem_Click;
             // 
             // viewBooksToolStripMenuItem
             // 
             viewBooksToolStripMenuItem.Name = "viewBooksToolStripMenuItem";
-            viewBooksToolStripMenuItem.Size = new Size(196, 34);
+            viewBooksToolStripMenuItem.Size = new Size(180, 22);
             viewBooksToolStripMenuItem.Text = "View Books";
+            viewBooksToolStripMenuItem.Click += viewBooksToolStripMenuItem_Click;
             // 
             // studentToolStripMenuItem
             // 
             studentToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addStudentToolStripMenuItem, viewStudentsToolStripMenuItem });
-            studentToolStripMenuItem.Font = new Font("K2D", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            studentToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             studentToolStripMenuItem.Image = (Image)resources.GetObject("studentToolStripMenuItem.Image");
             studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            studentToolStripMenuItem.Size = new Size(102, 33);
+            studentToolStripMenuItem.Size = new Size(88, 24);
             studentToolStripMenuItem.Text = "Student";
             // 
             // addStudentToolStripMenuItem
             // 
             addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem";
-            addStudentToolStripMenuItem.Size = new Size(273, 34);
+            addStudentToolStripMenuItem.Size = new Size(234, 22);
             addStudentToolStripMenuItem.Text = "Add Student";
             // 
             // viewStudentsToolStripMenuItem
             // 
             viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
-            viewStudentsToolStripMenuItem.Size = new Size(273, 34);
+            viewStudentsToolStripMenuItem.Size = new Size(234, 22);
             viewStudentsToolStripMenuItem.Text = "View Student Information";
             viewStudentsToolStripMenuItem.Click += viewStudentsToolStripMenuItem_Click;
             // 
             // issueBooksToolStripMenuItem
             // 
-            issueBooksToolStripMenuItem.Font = new Font("K2D", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            issueBooksToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             issueBooksToolStripMenuItem.Image = (Image)resources.GetObject("issueBooksToolStripMenuItem.Image");
             issueBooksToolStripMenuItem.Name = "issueBooksToolStripMenuItem";
-            issueBooksToolStripMenuItem.Size = new Size(128, 33);
+            issueBooksToolStripMenuItem.Size = new Size(116, 24);
             issueBooksToolStripMenuItem.Text = "Issue Books";
             // 
             // returnBooksToolStripMenuItem
             // 
-            returnBooksToolStripMenuItem.Font = new Font("K2D", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            returnBooksToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             returnBooksToolStripMenuItem.Image = (Image)resources.GetObject("returnBooksToolStripMenuItem.Image");
             returnBooksToolStripMenuItem.Name = "returnBooksToolStripMenuItem";
-            returnBooksToolStripMenuItem.Size = new Size(139, 33);
+            returnBooksToolStripMenuItem.Size = new Size(125, 24);
             returnBooksToolStripMenuItem.Text = "Return Books";
             // 
             // completeBookDetailsToolStripMenuItem
             // 
-            completeBookDetailsToolStripMenuItem.Font = new Font("K2D", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            completeBookDetailsToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             completeBookDetailsToolStripMenuItem.Image = (Image)resources.GetObject("completeBookDetailsToolStripMenuItem.Image");
             completeBookDetailsToolStripMenuItem.Name = "completeBookDetailsToolStripMenuItem";
-            completeBookDetailsToolStripMenuItem.Size = new Size(205, 33);
+            completeBookDetailsToolStripMenuItem.Size = new Size(185, 24);
             completeBookDetailsToolStripMenuItem.Text = "Complete Book Details";
             // 
             // exitToolStripMenuItem
             // 
-            exitToolStripMenuItem.Font = new Font("K2D", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            exitToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             exitToolStripMenuItem.Image = (Image)resources.GetObject("exitToolStripMenuItem.Image");
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(74, 33);
+            exitToolStripMenuItem.Size = new Size(63, 24);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Dashboard";
             Text = "Dashboard";
             WindowState = FormWindowState.Maximized;
