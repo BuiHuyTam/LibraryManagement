@@ -29,11 +29,23 @@ namespace LibraryManagement
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure you want to exit?", "Confirm", MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Application.Exit();
             }
-            
+
+        }
+
+        private void addNewBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddBooks abs = new AddBooks();
+            abs.Show();
+        }
+
+        private void completeBookDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CompleteBookDetails cdd = new CompleteBookDetails();
+            cdd.Show();
         }
     }
 }
