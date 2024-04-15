@@ -41,5 +41,11 @@ namespace LibraryManagement
             AddBooks abs = new AddBooks();
             abs.Show();
         }
+
+        private void issueBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IssueBooks ib = new IssueBooks();
+            ib.Show();
+        }
     }
 }
