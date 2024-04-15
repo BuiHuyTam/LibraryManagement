@@ -34,7 +34,6 @@
             label3 = new Label();
             txtSearchEnrollment = new TextBox();
             button1 = new Button();
-            panel2 = new Panel();
             panel3 = new Panel();
             txtDepartment = new TextBox();
             txtEnrollment = new TextBox();
@@ -51,8 +50,10 @@
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -115,13 +116,6 @@
             button1.TabIndex = 3;
             button1.Text = "Refresh";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(0, 195);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(971, 179);
-            panel2.TabIndex = 4;
             // 
             // panel3
             // 
@@ -282,13 +276,21 @@
             label5.Text = "Student Semester";
             label5.Click += label5_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(0, 190);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(971, 179);
+            dataGridView1.TabIndex = 30;
+            // 
             // ViewStudentInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(970, 601);
+            Controls.Add(dataGridView1);
             Controls.Add(panel3);
-            Controls.Add(panel2);
             Controls.Add(button1);
             Controls.Add(txtSearchEnrollment);
             Controls.Add(label3);
@@ -299,6 +301,7 @@
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -311,7 +314,6 @@
         private Label label3;
         private TextBox txtSearchEnrollment;
         private Button button1;
-        private Panel panel2;
         private Panel panel3;
         private Button btnCancel;
         private Button btnDelete;
@@ -328,5 +330,6 @@
         private Label label4;
         private Label label8;
         private Label label9;
+        private DataGridView dataGridView1;
     }
 }
