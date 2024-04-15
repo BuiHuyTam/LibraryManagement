@@ -103,6 +103,7 @@
             btnExit.TabIndex = 4;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // btnRefresh
             // 
@@ -113,6 +114,7 @@
             btnRefresh.TabIndex = 3;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnSearch
             // 

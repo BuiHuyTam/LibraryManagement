@@ -123,7 +123,7 @@ namespace LibraryManagement
 
         private void txtEnrollement_TextChanged(object sender, EventArgs e)
         {
-            if(txtEnrollement.Text == "")
+            if (txtEnrollement.Text == "")
             {
                 txtName.Clear();
                 txtDep.Clear();
@@ -131,6 +131,19 @@ namespace LibraryManagement
                 txtContact.Clear();
                 txtEmail.Clear();
 
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtEnrollement.Clear();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are You Sure?", "Confirmation",MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK) 
+            {
+                this.Close();
             }
         }
     }
