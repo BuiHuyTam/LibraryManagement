@@ -161,12 +161,16 @@
         private ToolStripMenuItem addNewBookToolStripMenuItem;
         private ToolStripMenuItem viewBooksToolStripMenuItem;
         private ToolStripMenuItem studentToolStripMenuItem;
-        private ToolStripMenuItem addStudentToolStripMenuItem;
+        private ToolStripMenuItem addStudentToolStripMenuItem(object sender, EventArgs e) { 
+            AddStudent ast = new AddStudent();
+            ast.Show();
+        }
+
         private ToolStripMenuItem viewStudentsToolStripMenuItem;
         private ToolStripMenuItem issueBooksToolStripMenuItem;
         private ToolStripMenuItem returnBooksToolStripMenuItem;
         private ToolStripMenuItem completeBookDetailsToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
-        private BindingSource bindingSource1;
+        private BindingSource bindingSource1;   
     }
 }
