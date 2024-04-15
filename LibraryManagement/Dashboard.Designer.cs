@@ -1,4 +1,7 @@
-﻿namespace LibraryManagement
+﻿using System.Data;
+using System.Data.SqlClient;
+
+namespace LibraryManagement
 {
     partial class Dashboard
     {
@@ -166,7 +169,11 @@
             ast.Show();
         }
 
-        private ToolStripMenuItem viewStudentsToolStripMenuItem;
+        private ToolStripMenuItem viewStudentsToolStripMenuItem(object sender, EventArgs e) {
+            ViewStudentInformation vsi = new ViewStudentInformation();
+            vsi.Show();
+        }
+
         private ToolStripMenuItem issueBooksToolStripMenuItem;
         private ToolStripMenuItem returnBooksToolStripMenuItem;
         private ToolStripMenuItem completeBookDetailsToolStripMenuItem;
