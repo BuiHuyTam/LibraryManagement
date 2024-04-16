@@ -22,7 +22,7 @@ namespace LibraryManagement
         {
             panel2.Visible = false;
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP\\SQLEXPRESS; database = libary; integrated security = True"; //Thong tin SQL
+            con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True"; //Thong tin SQL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
@@ -44,7 +44,7 @@ namespace LibraryManagement
             }
             panel2.Visible = true;
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP\\SQLEXPRESS; database = libary; integrated security = True"; //Thong tin SQL
+            con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True"; //Thong tin SQL
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
@@ -73,7 +73,7 @@ namespace LibraryManagement
             if (txtBookName.Text != "")
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = DESKTOP\\SQLEXPRESS; database = libary; integrated security = True"; //Thong tin SQL
+                con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True"; //Thong tin SQL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -87,7 +87,7 @@ namespace LibraryManagement
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = DESKTOP\\SQLEXPRESS; database = libary; integrated security = True"; //Thong tin SQL
+                con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True"; //Thong tin SQL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -118,7 +118,7 @@ namespace LibraryManagement
                 Int64 quan = Int64.Parse(txtQuantity.Text);
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = DESKTOP\\SQLEXPRESS; database = libary; integrated security = True"; //Thong tin SQL
+                con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True"; //Thong tin SQL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -134,7 +134,7 @@ namespace LibraryManagement
             if (MessageBox.Show("Data Will Delete. Confirm?", "Confirmation Dialog", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = DESKTOP\\SQLEXPRESS; database = libary; integrated security = True"; //Thong tin SQL
+                con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True"; //Thong tin SQL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
