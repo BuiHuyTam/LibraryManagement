@@ -21,18 +21,18 @@ namespace LibraryManagement
         private void CompleteBookDetails_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP\\SQLEXPRESS; database = library; integrated security = True";
+            con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
             cmd.CommandText = "select * from IRBOOK where book_return_date is null";
-            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             
-            cmd.CommandText = "select * from IRBOOK where book_return_date is null";
-            SqlDataAdapter da1 = new SqlDataAdapter();
+            cmd.CommandText = "select * from IRBOOK where book_return_date is not null";
+            SqlDataAdapter da1 = new SqlDataAdapter(cmd);
             DataSet ds1 = new DataSet();
             da.Fill(ds1);
             dataGridView2.DataSource = ds1.Tables[0];
