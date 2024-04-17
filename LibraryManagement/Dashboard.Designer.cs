@@ -73,13 +73,14 @@ namespace LibraryManagement
             // addNewBookToolStripMenuItem
             // 
             addNewBookToolStripMenuItem.Name = "addNewBookToolStripMenuItem";
-            addNewBookToolStripMenuItem.Size = new Size(201, 26);
+            addNewBookToolStripMenuItem.Size = new Size(224, 26);
             addNewBookToolStripMenuItem.Text = "Add New Book";
+            addNewBookToolStripMenuItem.Click += addNewBookToolStripMenuItem_Click;
             // 
             // viewBooksToolStripMenuItem
             // 
             viewBooksToolStripMenuItem.Name = "viewBooksToolStripMenuItem";
-            viewBooksToolStripMenuItem.Size = new Size(201, 26);
+            viewBooksToolStripMenuItem.Size = new Size(224, 26);
             viewBooksToolStripMenuItem.Text = "View Books";
             viewBooksToolStripMenuItem.Click += viewBooksToolStripMenuItem_Click;
             // 

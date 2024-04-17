@@ -114,6 +114,7 @@
             button2.TabIndex = 13;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += btnCancel_Click;
             // 
             // button1
             // 
@@ -124,6 +125,7 @@
             button1.TabIndex = 12;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += btnSave_Click;
             // 
             // dateTimePicker1
             // 
