@@ -24,7 +24,8 @@ namespace LibraryManagement
 
         private void viewStudentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ViewStudentInformation vsi = new ViewStudentInformation();
+            vsi.Show();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,5 +48,18 @@ namespace LibraryManagement
             IssueBooks ib = new IssueBooks();
             ib.Show();
         }
+
+        private void viewBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewBook vb = new ViewBook();
+            vb.Show();
+        }
+
+        private void addStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddStudent ast = new AddStudent();
+            ast.Show();
+        }
+
     }
 }

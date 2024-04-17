@@ -44,9 +44,9 @@ namespace LibraryManagement
         {
             if (txtEnrollement.Text != "")
             {
-                String edi = txtEnrollement.Text;
+                String eid = txtEnrollement.Text;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data_source = DESKTOP_E4I36RE\\SQLEXPRESS; database = library; intergrated sercurity=true";
+                con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True";
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 cmd.CommandText = "select * from NewStudent where enroll = '" + eid + "'";

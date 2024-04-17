@@ -36,11 +36,11 @@
             button2 = new Button();
             button1 = new Button();
             dateTimePicker1 = new DateTimePicker();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtQuantity = new TextBox();
+            txtBookPrice = new TextBox();
+            txtPublication = new TextBox();
+            txtAuthor = new TextBox();
+            txtBookName = new TextBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -89,11 +89,11 @@
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(dateTimePicker1);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtQuantity);
+            panel2.Controls.Add(txtBookPrice);
+            panel2.Controls.Add(txtPublication);
+            panel2.Controls.Add(txtAuthor);
+            panel2.Controls.Add(txtBookName);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
@@ -133,45 +133,46 @@
             dateTimePicker1.Size = new Size(309, 30);
             dateTimePicker1.TabIndex = 11;
             // 
-            // textBox5
+            // txtQuantity
             // 
-            textBox5.Font = new Font("Segoe UI", 10.2F);
-            textBox5.Location = new Point(202, 264);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(309, 30);
-            textBox5.TabIndex = 10;
+            txtQuantity.Font = new Font("Segoe UI", 10.2F);
+            txtQuantity.Location = new Point(202, 264);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(309, 30);
+            txtQuantity.TabIndex = 10;
             // 
-            // textBox4
+            // txtBookPrice
             // 
-            textBox4.Font = new Font("Segoe UI", 10.2F);
-            textBox4.Location = new Point(202, 212);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(309, 30);
-            textBox4.TabIndex = 9;
+            txtBookPrice.Font = new Font("Segoe UI", 10.2F);
+            txtBookPrice.Location = new Point(202, 212);
+            txtBookPrice.Name = "txtBookPrice";
+            txtBookPrice.Size = new Size(309, 30);
+            txtBookPrice.TabIndex = 9;
             // 
-            // textBox3
+            // txtPublication
             // 
-            textBox3.Font = new Font("Segoe UI", 10.2F);
-            textBox3.Location = new Point(202, 110);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(309, 30);
-            textBox3.TabIndex = 8;
+            txtPublication.Font = new Font("Segoe UI", 10.2F);
+            txtPublication.Location = new Point(202, 110);
+            txtPublication.Name = "txtPublication";
+            txtPublication.Size = new Size(309, 30);
+            txtPublication.TabIndex = 8;
+            txtPublication.TextChanged += textBox3_TextChanged;
             // 
-            // textBox2
+            // txtAuthor
             // 
-            textBox2.Font = new Font("Segoe UI", 10.2F);
-            textBox2.Location = new Point(202, 64);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(309, 30);
-            textBox2.TabIndex = 7;
+            txtAuthor.Font = new Font("Segoe UI", 10.2F);
+            txtAuthor.Location = new Point(202, 64);
+            txtAuthor.Name = "txtAuthor";
+            txtAuthor.Size = new Size(309, 30);
+            txtAuthor.TabIndex = 7;
             // 
-            // textBox1
+            // txtBookName
             // 
-            textBox1.Font = new Font("Segoe UI", 10.2F);
-            textBox1.Location = new Point(202, 18);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(309, 30);
-            textBox1.TabIndex = 6;
+            txtBookName.Font = new Font("Segoe UI", 10.2F);
+            txtBookName.Location = new Point(202, 18);
+            txtBookName.Name = "txtBookName";
+            txtBookName.Size = new Size(309, 30);
+            txtBookName.TabIndex = 6;
             // 
             // label7
             // 
@@ -240,6 +241,7 @@
             ClientSize = new Size(582, 458);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AddBooks";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddBooks";
@@ -263,11 +265,11 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtQuantity;
+        private TextBox txtBookPrice;
+        private TextBox txtPublication;
+        private TextBox txtAuthor;
+        private TextBox txtBookName;
         private DateTimePicker dateTimePicker1;
         private Button button1;
         private Button button2;
