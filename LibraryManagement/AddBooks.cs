@@ -45,7 +45,7 @@ namespace LibraryManagement
                 cmd.Connection = con;
 
                 con.Open();
-                cmd.CommandText = "insert into NewBook(bName,bAuthor,bPubl,bPDate,bPrice,bQuan) values ('" + bname + "', '" + bauthor + "','" + publication + "','" + pdate + "','"+price+"','"+quan+"')";
+                cmd.CommandText = "insert into NewBook(bName,bAuthor,bPubl,bPDate,bPrice,bQuan) values ('" + bname + "', '" + bauthor + "','" + publication + "','" + pdate + "','" + price + "','" + quan + "')";
                 cmd.ExecuteNonQuery();
                 con.Close();
 
@@ -64,10 +64,15 @@ namespace LibraryManagement
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("This will DELETE your unsave DATA.", "Are you sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK) 
+            if (MessageBox.Show("This will DELETE your unsave DATA.", "Are you sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 this.Close();
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
