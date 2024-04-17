@@ -21,7 +21,7 @@ namespace LibraryManagement
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-E4UJ6RE\\SQLEXPRESS, database = library, intergrated security =True";
+            con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
@@ -59,13 +59,12 @@ namespace LibraryManagement
             }
             txtBookName.Text = bname;
             txtBookIssueDate.Text = bdate;
-
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-E4UJ6RE\\SQLEXPRESS, database = library, intergrated security =True";
+            con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
@@ -74,7 +73,7 @@ namespace LibraryManagement
             con.Close();
 
             MessageBox.Show("Return Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ReturnBook_Load(this. null);
+            ReturnBook_Load(this,null);
         }
 
         private void txtEnterEnrollment_TextChanged(object sender, EventArgs e)
