@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LibraryManagement
@@ -21,11 +15,11 @@ namespace LibraryManagement
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True";
+            con.ConnectionString = "data source = LOC-DEP-TRAI\\SQLEXPRESS02; database=LibraryManagement; integrated security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "select * from IRBook where std_enroll = '" + txtEnterEnrollment.Text + "' and book_return_date IS NULL";
+            cmd.CommandText = "SELECT * FROM IRBook WHERE std_id IN (SELECT stuid FROM NewStudent WHERE enroll = '" + txtEnterEnrollment.Text + "') AND book_return_date IS NULL";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -45,17 +39,19 @@ namespace LibraryManagement
             panel2.Visible = false;
             txtEnterEnrollment.Clear();
         }
+
         string bname;
         string bdate;
         Int64 rowid;
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             panel2.Visible = true;
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 rowid = Int64.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                bname = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-                bdate = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                bname = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(); // Tên sách
+                bdate = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(); // Ngày mượn
             }
             txtBookName.Text = bname;
             txtBookIssueDate.Text = bdate;
@@ -64,16 +60,16 @@ namespace LibraryManagement
         private void btnReturn_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True";
+            con.ConnectionString = "data source = LOC-DEP-TRAI\\SQLEXPRESS02; database=LibraryManagement; integrated security=True";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
-            cmd.CommandText = "UPDATE IRBook SET book_return_date = '" + dateTimePicker1.Text + "' WHERE std_enroll = '" + txtEnterEnrollment.Text + "' AND id =" + rowid;
+            cmd.CommandText = "UPDATE IRBook SET book_return_date = '" + dateTimePicker1.Text + "' WHERE std_id = (SELECT stuid FROM NewStudent WHERE enroll = '" + txtEnterEnrollment.Text + "') AND id =" + rowid;
             cmd.ExecuteNonQuery();
             con.Close();
 
             MessageBox.Show("Return Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ReturnBook_Load(this,null);
+            ReturnBook_Load(this, null);
         }
 
         private void txtEnterEnrollment_TextChanged(object sender, EventArgs e)
@@ -97,7 +93,7 @@ namespace LibraryManagement
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            panel2.Visible =false;
+            panel2.Visible = false;
         }
     }
 }
