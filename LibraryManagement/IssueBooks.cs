@@ -44,7 +44,7 @@ namespace LibraryManagement
         {
             if (txtEnrollement.Text != "")
             {
-                String edi = txtEnrollement.Text;
+                String eid = txtEnrollement.Text;
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = "data_source = DESKTOP_E4I36RE\\SQLEXPRESS; database = library; intergrated sercurity=true";
                 SqlCommand cmd = new SqlCommand();
