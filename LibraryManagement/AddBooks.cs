@@ -40,7 +40,7 @@ namespace LibraryManagement
                 Int64 quan = Int64.Parse(txtQuantity.Text);
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = BHTAM\\SQLEXPRESS; database=LibraryManagement; integrated security=True"; //thong tin SQL
+                con.ConnectionString = "data source = LOC-DEP-TRAI\\SQLEXPRESS02; database=LibraryManagement; integrated security=True"; //thong tin SQL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
@@ -71,6 +71,11 @@ namespace LibraryManagement
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBookName_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -121,7 +121,7 @@ namespace LibraryManagement
         {
             if (txtName.Text != "")
             {
-                if (comboBoxBooks.SelectedIndex != -1 && comboBoxBooks.SelectedIndex <= maxBooksPerStudent)
+                if (comboBoxBooks.SelectedIndex != -1)
                 {
                     String enroll = txtEnrollement.Text;
                     String bookname = comboBoxBooks.Text;
