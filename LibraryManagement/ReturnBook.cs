@@ -19,7 +19,7 @@ namespace LibraryManagement
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "SELECT * FROM IRBook WHERE std_id IN (SELECT stuid FROM NewStudent WHERE enroll = '" + txtEnterEnrollment.Text + "') AND book_return_date IS NULL";
+            cmd.CommandText = "SELECT IRBook.id AS IRBookID, IRBook.book_id, IRBook.std_id, NewBook.bname, IRBook.book_issue_date FROM IRBook INNER JOIN NewBook ON IRBook.book_id = NewBook.bid WHERE IRBook.std_id IN (SELECT stuid FROM NewStudent WHERE enroll = '" + txtEnterEnrollment.Text + "') AND IRBook.book_return_date IS NULL";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -50,8 +50,8 @@ namespace LibraryManagement
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 rowid = Int64.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                bname = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(); // Tên sách
-                bdate = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(); // Ngày mượn
+                bname = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(); 
+                bdate = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(); 
             }
             txtBookName.Text = bname;
             txtBookIssueDate.Text = bdate;
